@@ -3,9 +3,9 @@
 $url = "http://www.topsts.cn/app/fatetest/";
 //数据库信息
 $dbhost = "localhost";//数据库主机
-$dbuser = "a0323200424";//数据库用户名
-$dbpass = "topsts09";//数据库密码
-$dbbase = "a0323200424";//数据库名称
+$dbuser = "root";//数据库用户名
+$dbpass = "topsts";//数据库密码
+$dbbase = "lovetest";//数据库名称
 $et = "lovetest_";//数据库表前缀
 $mailkey = "topswanttosendmail";//使用Tops mail api需要的KEY
 //mysql连接

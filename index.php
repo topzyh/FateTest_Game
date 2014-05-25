@@ -72,6 +72,6 @@ function aa()
     	<p>&nbsp;</p>
 	</div>
 </div>
-<div id="footer">&copy;Topsts.||<script src="http://s6.cnzz.com/stat.php?id=5278810&web_id=5278810" language="JavaScript"></script>||<?php require_once 'cs.php';echo '<img src="'._cnzzTrackPageView(5278810).'" width="0" height="0"/>';?></div>
+<div id="footer">&copy;Topsts.||<script src="http://s6.cnzz.com/stat.php?id=5278810&web_id=5278810" language="JavaScript"></script></div>
 </body>
 </html>
