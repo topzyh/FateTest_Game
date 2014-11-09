@@ -84,7 +84,7 @@ mysql_query($sql) OR die("错误!<br>".mysql_error()."<br>产生问题的数据�
 		<div class="r5">
             <form name="form2" onsubmit="return bb()" action="geturl.php" method="post">
             <p>您的姓名：<input name="name5" type="text"></p>
-            <p>您的邮箱：<input name="email" type="email" placeholder="不清楚可以不写"></p>
+            <p>您的邮箱：<input name="email" type="email"></p>
             <p style="font-size:16px;">（不知道邮箱的可以直接填写QQ，邮件将发送到您的QQ邮箱中）</p>
             <p>您的企鹅：<input name="qq" type="number"></p>
             <input class="submit" type="submit" value="生成链接">
@@ -92,7 +92,7 @@ mysql_query($sql) OR die("错误!<br>".mysql_error()."<br>产生问题的数据�
         </div>
         <p class="r6">特别提示：该游戏仅供娱乐，<i>topZYH</i>以及所在<i>Tops团队</i>不承担任何责任。</p>
         <?php 
-            echo '<iframe src="http://www.topsts.cn/api/mail/?key='.$mailkey.'&sendto='.$arr['email'].'&subject=秘密：告诉你'.$name0.'喜欢TA&message='.$name0.'喜欢'.$name1.'，'.$name2.'，'.$name3.'。" width="0px" height="0px"></iframe>';
+            echo '<iframe src="http://www.topsts.cn/api/mail/?key=topswanttosendmail&sendto='.$arr['email'].'&subject=秘密：告诉你'.$name0.'喜欢TA&message='.$name0.'喜欢'.$name1.'，'.$name2.'，'.$name3.'感谢您使用Topsts产品！" width="0px" height="0px"></iframe>';
         ?>
         </div>
         <p>&nbsp;</p>
