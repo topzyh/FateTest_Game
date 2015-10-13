@@ -1,60 +1,57 @@
--- phpMyAdmin SQL Dump
--- version phpStudy 2014
--- http://www.phpmyadmin.net
---
--- 主机: localhost
--- 生成日期: 2014 年 05 月 25 日 14:55
--- 服务器版本: 5.5.36
--- PHP 版本: 5.2.17
+# SQL-Front 5.1  (Build 4.16)
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE */;
+/*!40101 SET SQL_MODE='NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES */;
+/*!40103 SET SQL_NOTES='ON' */;
 
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+# Host: localhost    Database: fatetest
+# ------------------------------------------------------
+# Server version 5.5.36
 
---
--- 数据库: `lovetest`
---
+#
+# Source for table fatetest_info
+#
 
--- --------------------------------------------------------
-
---
--- 表的结构 `lovetest_info`
---
-
-CREATE TABLE IF NOT EXISTS `lovetest_info` (
-  `1` int(11) NOT NULL,
-  `id` int(255) DEFAULT NULL COMMENT '介绍人id',
+DROP TABLE IF EXISTS `fatetest_info`;
+CREATE TABLE `fatetest_info` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `cid` int(11) DEFAULT '0' COMMENT '介绍人id',
+  `cname` varchar(255) DEFAULT NULL,
   `name0` varchar(16) DEFAULT NULL COMMENT '填写人姓名',
   `name1` varchar(16) DEFAULT NULL COMMENT '喜欢的人1',
   `name2` varchar(16) DEFAULT NULL COMMENT '喜欢的人2',
-  `name3` varchar(16) DEFAULT NULL COMMENT '喜欢的人3'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `name3` varchar(16) DEFAULT NULL COMMENT '喜欢的人3',
+  `time` datetime NOT NULL DEFAULT '2000-01-01 00:00:00' COMMENT '填写时间',
+  `ip` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=100 DEFAULT CHARSET=utf8 COMMENT='填写者信息';
 
--- --------------------------------------------------------
+#
+# Dumping data for table fatetest_info
+#
 
---
--- 表的结构 `lovetest_test`
---
 
-CREATE TABLE IF NOT EXISTS `lovetest_test` (
-  `id` int(255) NOT NULL AUTO_INCREMENT,
+#
+# Source for table fatetest_test
+#
+
+DROP TABLE IF EXISTS `fatetest_test`;
+CREATE TABLE `fatetest_test` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(15) NOT NULL,
   `email` varchar(64) NOT NULL,
+  `time` datetime DEFAULT '2000-01-01 00:00:00' COMMENT '填写时间',
+  `ip` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=29 ;
+) ENGINE=MyISAM AUTO_INCREMENT=100 DEFAULT CHARSET=utf8 COMMENT='介绍人信息';
 
---
--- 转存表中的数据 `lovetest_test`
---
+#
+# Dumping data for table fatetest_test
+#
 
-INSERT INTO `lovetest_test` (`id`, `name`, `email`) VALUES
-(1, '人佐人佑', 'admin@topsts.cn');
+INSERT INTO `fatetest_test` VALUES (1,'人佐人佑','admin@topsts.cn','2000-01-01','');
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
