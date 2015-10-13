@@ -18,7 +18,7 @@ $url = 'http://www.topsts.cn/app/fatetest/';
 // 统计代码(可以使用CNZZ)
 $cnzz = '<script src="http://s6.cnzz.com/stat.php?id=5278810&web_id=5278810" language="JavaScript"></script>';
 // Topsts API Mail Key
-$topsmailkey = 'topswanttosendmail';
+$topsmailkey = '*******';
 
 // 数据库信息
 $db['host'] = "localhost"; // 数据库主机
